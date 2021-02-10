@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="pivotino_feedback_view_tree" model="ir.ui.view">
+            <field name="name">pivotino.feedback.view.tree</field>
+            <field name="model">pivotino.feedback</field>
+            <field name="arch" type="xml">
+                <tree string="Feedback" create="false" delete="false" import="false">
+                    <field name="domain"/>
+                    <field name="username"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pivotino_feedback_view_form" model="ir.ui.view">
+            <field name="name">pivotino.feedback.view.form</field>
+            <field name="model">pivotino.feedback</field>
+            <field name="arch" type="xml">
+                <form string="Feedback" create="false" edit="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="username"/>
+                                <field name="email"/>
+                                <field name="domain"/>
+                                <field name="feedback_tag"/>
+                                <field name="is_satisfy"/>
+                            </group>
+                            <separator string="Feedback Message" colspan="4"/>
+                            <field name="feedback" colspan="4" nolabel="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--    Feedback Action   -->
+        <record id="pivotino_feedback_action" model="ir.actions.act_window">
+            <field name="name">Feedback</field>
+            <field name="res_model">pivotino.feedback</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_feedback_root"
+                  name="Pivotino Feedback"
+                  parent="base.menu_administration"/>
+
+        <menuitem id="feedback_popup"
+                  name="Feedback PopUp"
+                  action="pivotino_feedback_action"
+                  parent="pivotino_feedback.menu_feedback_root"/>
+    </data>
+</odoo>

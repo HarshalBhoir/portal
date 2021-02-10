@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_general_feedback_tags_user,general.feedback.tags.user,model_general_feedback_tags,,1,1,1,1
+access_positive_general_feedback_user,positive.general.feedback.user,model_positive_general_feedback,,1,1,1,1
+access_negative_general_feedback_user,negative.general.feedback.user,model_negative_general_feedback,,1,1,1,1
+access_additional_general_feedback_user,additional.general.feedback.user,model_additional_general_feedback,,1,1,1,1

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View: Rancher API Configuration -->
+    <record id="view_rancher_api_config_tree" model="ir.ui.view">
+        <field name="name">rancher.api.config.tree</field>
+        <field name="model">rancher.api.config</field>
+        <field name="arch" type="xml">
+            <tree string="SaaS Subscription">
+                <field name="name"/>
+                <field name="base_url"/>
+                <field name="cluster_id"/>
+                <field name="project_id"/>
+                <field name="catalog_name"/>
+                <field name="namespace_url"/>
+                <field name="app_url"/>
+                <field name="default"/>
+                <field name="app_version"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View: Rancher API Configuration -->
+    <record id="view_rancher_api_config_form" model="ir.ui.view">
+        <field name="name">rancher.api.config.form</field>
+        <field name="model">rancher.api.config</field>
+        <field name="arch" type="xml">
+            <form string="Rancher API Configuration">
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h2><field name="name"/></h2>
+                    <group>
+                        <field name="base_url"/>
+                        <field name="cluster_id"/>
+                        <field name="project_id"/>
+                        <field name="catalog_name"/>
+                    </group>
+                    <group>
+                        <field name="namespace_url"/>
+                        <field name="app_url"/>
+                        <field name="api_token"/>
+                        <field name="default"/>
+                    </group>
+                    <group>
+                        <field name="app_version"/>
+                        <field name="app_name"/>
+                        <field name="template_app_name"/>
+                        <field name="is_onenet"/>
+                    </group>
+                    <notebook>
+                        <page name="production" string="Production">
+                            <group string="Production">
+                                <group string="Namespace">
+                                    <field name="namespace"/>
+                                    <field name="pgo_namespace"/>
+                                </group>
+                                <group string="Persistent Volume Claim">
+                                    <field name="pvc"/>
+                                </group>
+                                <group string="Database">
+                                    <field name="db_host"/>
+                                    <field name="db_service"/>
+                                </group>
+                                <group string="SSL">
+                                    <field name="ssl_cert"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Postgres Credentials">
+                                    <field name="postgres_user"/>
+                                    <field name="postgres_pass"/>
+                                </group>
+                                <group string="Template Clone">
+                                    <field name="clone_template"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="staging" string="Staging">
+                            <group string="Staging">
+                                <group string="Namespace">
+                                    <field name="staging_namespace"/>
+                                    <field name="staging_pgo_namespace"/>
+                                </group>
+                                <group string="Persistent Volume Claim">
+                                    <field name="staging_pvc"/>
+                                </group>
+                                <group string="Database">
+                                    <field name="staging_db_host"/>
+                                    <field name="staging_db_service"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Postgres Credentials">
+                                    <field name="staging_postgres_user"/>
+                                    <field name="staging_postgres_pass"/>
+                                </group>
+                                <group string="Template Clone">
+                                    <field name="staging_clone_template"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action: Rancher API Configuration -->
+    <record id="action_pivotino_rancher_api_config" model="ir.actions.act_window">
+        <field name="name">Rancher API Configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rancher.api.config</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Menu: Pivotino -->
+    <menuitem id="menu_action_pivotino_rancher_api"
+              name="API"
+              parent="base.menu_administration"/>
+
+    <!-- Menu: Rancher API Configuration -->
+    <menuitem action="action_pivotino_rancher_api_config"
+              id="menu_action_pivotino_rancher_api_config"
+              parent="pivotino_website.menu_action_pivotino_rancher_api"/>
+
+    <!-- Tree View: Template Version Configuration -->
+    <record id="template_version_config_tree" model="ir.ui.view">
+        <field name="name">template.version.tree</field>
+        <field name="model">template.version</field>
+        <field name="arch" type="xml">
+            <tree string="Template Version" editable="bottom">
+                <field name="name"/>
+                <field name="latest"/>
+                <field name="instance_prefix"/>
+                <field name="template_prefix"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Action: Template Version Configuration -->
+    <record id="action_template_version_config" model="ir.actions.act_window">
+        <field name="name">Template Version</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">template.version</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Menu: Template Version Configuration -->
+    <menuitem action="action_template_version_config"
+              id="menu_action_template_version_config"
+              parent="pivotino_website.menu_action_pivotino_rancher_api"/>
+
+    <!-- Menu: Rancher API Configuration -->
+    <menuitem action="pivotino_website.create_instance_wizard_action"
+              id="menu_action_pivotino_template_instance"
+              parent="pivotino_website.menu_action_pivotino_rancher_api"/>
+</odoo>

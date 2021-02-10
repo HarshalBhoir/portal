@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="osp_banner" name="OSP Banner">
+        <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_colored_level"
+                 data-scroll-background-ratio="1" data-snippet="s_banner" data-name="OSP Banner" style="">
+            <span class="s_parallax_bg oe_img_bg"
+                  style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="jumbotron rounded o_cc o_cc1 pt32 pb32 o_colored_level offset-lg-1 col-lg-7"
+                         data-name="Box" style="">
+                        <h1>
+                            <font style="font-size: 62px;">
+                                <b>World Class ERP for Malaysia SMEs</b>
+                            </font>
+                        </h1>
+                        <p class="lead">
+                            <font style="font-size: 24px;">
+                                <b>Affordable ERP at your fingertips</b>
+                            </font>
+                            <br/>
+                        </p>
+                        <a href="#" class="btn btn-lg btn-primary flat mb-2" data-original-title="" title="">
+                            DISCOVER MORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

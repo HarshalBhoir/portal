@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- User Management in My Account -->
+    <template id="portal_my_home_pivotino_user_management"
+              name="Portal My Home : Pivotino User Management"
+              inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">User Management</t>
+                <t t-set="url" t-value="'/my/user'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- User Management Breadcrumb in detail -->
+    <template id="portal_my_home_menu_user_management"
+              name="Portal layout : User Management Menu Entries"
+              inherit_id="portal.portal_breadcrumbs" priority="20">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'pivo_user_management'" class="breadcrumb-item active">
+                <t t-esc="breadcrumb_name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- User Management in detail -->
+    <template id="portal_my_user_management" name="My User Management">
+        <t t-call="portal.portal_layout">
+            <div class="container" id="portal_my_user_management">
+                <h2 class="mt32 mb16 text-alpha">Active Users</h2>
+                <t t-if="not active_users">
+                    <p>There are currently no active users for your account.</p>
+                </t>
+                <t t-if="active_users" t-call="portal.portal_table">
+                    <thead>
+                        <tr class="active">
+                            <th>Email</th>
+                            <th>Name</th>
+                            <th>Access Rights</th>
+                            <th>Date Joined</th>
+                            <th>Status</th>
+                            <th class="text-center"/>
+                            <th class="text-center"/>
+                            <th class="text-center"/>
+                        </tr>
+                    </thead>
+                    <t t-foreach="active_users" t-as="user">
+                        <tr>
+                            <td><t t-esc="user.email"/></td>
+                            <td><t t-esc="user.name"/></td>
+                            <td><t t-esc="user.user_role"/></td>
+                            <td><t t-esc="user.create_date" t-options='{"widget": "date"}'/></td>
+                            <td><t t-esc="user.res_user_state"/></td>
+                            <td class="text-center">
+                                <t t-if="user.res_user_state == 'Pending'">
+                                    <a class="mr4 fa fa-edit fa-envelope user_management_send" t-att-data-id="user.id" href="#" title="Re-Send Invitation"/>
+                                </t>
+                            </td>
+                            <td class="text-center">
+                                <a class="mr4 fa fa-edit user_management_edit" t-att-data-id="user.id" href="#" title="Edit User"/>
+                            </td>
+                            <td class="text-center">
+                                <a class="mr4 fa fa-trash user_management_delete" t-att-data-id="user.id" href="#" title="Delete User"/>
+                            </td>
+                        </tr>
+                    </t>
+                </t>
+                <separator/>
+                <button class="btn btn-primary btn-block user_management_add">
+                    <a class="mr4 fa fa-plus" href="#" title="Add User"/>
+                </button>
+                <hr class="mt32 mb32"/>
+            </div>
+        </t>
+    </template>
+
+</odoo>

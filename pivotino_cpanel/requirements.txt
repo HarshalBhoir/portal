@@ -1,0 +1,4 @@
+php-mysql
+php-gd
+curl php-cli php-mbstring git unzip
+php7.1

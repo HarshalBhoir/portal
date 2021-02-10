@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- *** Primary Variables *** -->
+    <template id="_assets_primary_variables" inherit_id="web._assets_primary_variables" priority="15">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/primary_variables.scss"/>
+        </xpath>
+    </template>
+
+    <!-- *** Common Assets *** -->
+    <template id="assets_common" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/navbar.scss"/>
+        </xpath>
+    </template>
+
+    <!-- *** Common Assets : web_tour *** -->
+    <template id="tour_assets_common" inherit_id="web_tour.assets_common">
+        <xpath expr="//link[@href='/web_tour/static/src/scss/tip.scss']" position="replace">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/tip.scss"/>
+        </xpath>
+    </template>
+
+    <!-- *** Backend Assets *** -->
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/webclient_extra.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/fields.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/fields_extra.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/form_view.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/form_view_extra.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/list_view_extra.scss"/>
+        </xpath>
+    </template>
+
+    <!-- *** Mail Backend Assets *** -->
+    <template id="mail_assets_backend" inherit_id="mail.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_web/static/src/scss/systray.scss"/>
+        </xpath>
+    </template>
+
+    <!-- *** Frontend Assets *** -->
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <!-- Facebook Pixel Code -->
+            <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '344552886923250');
+            fbq('track', 'PageView');
+            </script>
+            <noscript>
+                <img height="1" width="1" style="display:none"
+                     src="https://www.facebook.com/tr?id=344552886923250&amp;ev=PageView&amp;noscript=1"/>
+            </noscript>
+            <!-- End Facebook Pixel Code -->
+
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KV82RKX');</script>
+            <!-- End Google Tag Manager -->
+            <!-- Google Tag Manager (noscript) -->
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV82RKX"
+                        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
+            <!-- End Google Tag Manager (noscript) -->
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <div t-name="add_user_page" class="o_page_management_info">
+        <form>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a aria-controls="basic_page_info" role="tab" data-toggle="tab" class="nav-link active" href="#basic_page_info">Informations</a></li>
+            </ul>
+            <div class="tab-content mt16">
+                <div role="tabpanel" id="basic_page_info" class="tab-pane fade show active">
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-3" for="user_email">User Email</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="user_email"  required="required"/>
+                        </div>
+                    </div>
+                    <div class="form-group warn_about_call"></div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-3" for="user_rights">User Access</label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="user_rights"
+                                    id="user_rights" required="required">
+                                <option value=""> </option>
+                                <option value="user" t-att-selected="'user' == user_rights"> User </option>
+                                <option value="owner" t-att-selected="'owner' == user_rights"> Business Owner </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div t-name="edit_user_page" class="o_page_management_info">
+        <form>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a aria-controls="basic_page_info" role="tab" data-toggle="tab" class="nav-link active" href="#basic_page_info">Informations</a></li>
+            </ul>
+            <div class="tab-content mt16">
+                <div role="tabpanel" id="basic_page_info" class="tab-pane fade show active">
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-3" for="name">Name</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="name"/>
+                        </div>
+                    </div>
+                    <div class="form-group warn_about_call"></div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-3" for="user_rights">User Access</label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="user_rights"
+                                    id="user_rights">
+                                <option value=""> </option>
+                                <option value="user" t-att-selected="'user' == user_rights"> User </option>
+                                <option value="owner" t-att-selected="'owner' == user_rights"> Business Owner </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div t-name="delete_user_page" class="o_page_management_info">
+        <form>
+            <p>Are you sure you want to delete this user ?</p>
+        </form>
+    </div>
+
+</templates>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="Statistic Chart" id="easy_pie_chart">
+        <section class="services-square-section bg-white pt64 pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="chart_skill">
+                            <span class="chart" data-percent="86" data-color="#f9aa33" data-color2="#f94a17">
+                                <span class="percent">86</span>
+                            </span>
+                        </div>
+                        <h4 class="chart_title mt16">
+                            <a href="#">Title 1</a>
+                        </h4>
+                        <p class="pad0">
+                            Click edit button to change this text.
+                            Write what the customer would like to know, not what you want to show.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="chart_skill">
+                            <span class="chart" data-percent="50" data-color="#f9aa33" data-color2="#f94a17">
+                                <span class="percent">50</span>
+                            </span>
+                        </div>
+                        <h4 class="chart_title mt16">
+                            <a href="#">Title 2</a>
+                        </h4>
+                        <p class="pad0">
+                            Click edit button to change this text.
+                            Write what the customer would like to know, not what you want to show.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="chart_skill">
+                            <span class="chart" data-percent="30" data-color="#f9aa33" data-color2="#f94a17">
+                                <span class="percent">30</span>
+                            </span>
+                        </div>
+                        <h4 class="chart_title mt16">
+                            <a href="#">Title 3</a>
+                        </h4>
+                        <p class="pad0">
+                            Click edit button to change this text.
+                            Write what the customer would like to know, not what you want to show.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="chart_skill">
+                            <span class="chart" data-percent="75" data-color="#f9aa33" data-color2="#f94a17">
+                                <span class="percent">75</span>
+                            </span>
+                        </div>
+                        <h4 class="chart_title mt16">
+                            <a href="#">Title 4</a>
+                        </h4>
+                        <p class="pad0">
+                            Click edit button to change this text.
+                            Write what the customer would like to know, not what you want to show.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

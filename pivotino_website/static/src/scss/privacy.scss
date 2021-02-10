@@ -1,0 +1,15 @@
+#privacyCollapse {
+    .card {
+        .card-header:before {
+            color: $o-community-primary-color;
+            font-size: 20px;
+        }
+        .card-header {
+            font-size: 20px;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}

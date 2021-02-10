@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_show_get_started" inherit_id="portal.user_sign_in"
+              name="Show Get Started">
+        <xpath expr="//li/a[@t-attf-href='/web/login']" position="replace">
+            <a t-attf-href="/web/login" t-attf-class="#{_link_class}">My Subscription</a>
+        </xpath>
+        <xpath expr="//li[last()]" position="after">
+            <li groups="base.group_public" class="nav-item">
+                <a role="button" t-attf-href="/pivotino/subscription/get-started"
+                   class="btn btn-primary">
+                    <b>Get Started</b>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+</odoo>

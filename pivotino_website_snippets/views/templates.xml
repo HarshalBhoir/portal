@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr=".">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_website_snippets/static/src/scss/jquery.easypiechart.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_website_snippets/static/src/scss/s_banner_video.scss"/>
+
+            <script type="text/javascript"
+                    src="/pivotino_website_snippets/static/src/js/jquery.easypiechart.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_website_snippets/static/src/js/easypiechart_pivotino.js"/>
+
+            <script type="text/javascript" src="/pivotino_website_snippets/static/src/js/osp_popup.js"/>
+        </xpath>
+    </template>
+
+</odoo>

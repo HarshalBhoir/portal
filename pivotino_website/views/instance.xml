@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View: Instance Details -->
+    <record id="view_instance_details_tree" model="ir.ui.view">
+        <field name="name">instance.details.tree</field>
+        <field name="model">instance.details</field>
+        <field name="arch" type="xml">
+            <tree string="Instance Details">
+                <field name="name"/>
+                <field name="db_count"/>
+                <field name="is_free_instance"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View: Instance Details -->
+    <record id="view_instance_details_form" model="ir.ui.view">
+        <field name="name">instance.details.form</field>
+        <field name="model">instance.details</field>
+        <field name="arch" type="xml">
+            <form string="Instance Details">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="is_free_instance"/>
+                        <field name="instance_url"/>
+                        <field name="instance_state"/>
+                        <field name="db_count"/>
+                        <field name="db_user"/>
+                        <field name="db_master_password"/>
+                    </group>
+                    <notebook>
+                        <page name="database" string="Database">
+                            <field name="db_ids" widget="one2many_list">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="db_url"/>
+                                    <field name="partner_id"/>
+                                    <button name="preconfigure" string="Preconfigure" type="object" class="oe_highlight"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action: Instance Details -->
+    <record id="action_pivotino_instance_details" model="ir.actions.act_window">
+        <field name="name">Pivotino Instance Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">instance.details</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Menu: Instance Details -->
+    <menuitem action="action_pivotino_instance_details"
+              id="menu_action_pivotino_instance_details"
+              parent="pivotino_website.menu_action_pivotino_saas"/>
+
+
+</odoo>

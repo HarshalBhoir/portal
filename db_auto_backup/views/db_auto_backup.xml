@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- Tree view for showing the backup server configuration -->
+        <record id="backup_config_tree_view" model="ir.ui.view">
+            <field name="name">backup.server.config.tree</field>
+            <field name="model">backup.server.config</field>
+            <field name="arch" type="xml">
+                <tree string="Database Backup Configuration">
+                    <field name="name" string="Server Name"/>
+                    <field name="dest_ip_address" string="Server IP"/>
+                    <field name="dest_port_no" string="SSH Port Number"/>
+                    <field name="dest_zip_path"/>
+                    <field name="active"/>
+                    <field name="state" string="Connection Status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view for showing the backup server configuration -->
+        <record id="backup_config_form_view" model="ir.ui.view">
+            <field name="name">backup.server.config.form</field>
+            <field name="model">backup.server.config</field>
+            <field name="arch" type="xml">
+                <form string="Database Backup Configuration">
+                    <header>
+                        <button name="action_establish_connection" type="object" string="Establish Connection" class="oe_highlight"
+                        attrs="{'invisible': [('state', 'in', ('draft', 'connected'))]}"/>
+                        <button name="check_connection" type="object" string="Check Connection" confirm="Check if the server public key authentication exists?"/>
+                        <field name="state" widget="statusbar" statusbar_visible="not_connected,connected"
+                               statusbar_colors='{"not_connected":"blue","connected":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <group col="4">
+                            <field name="name" string="Server Name" required="1"/>
+                            <field name="active"/>
+                        </group>
+                        <notebook>
+                            <page string="Destination Server Configuration (SSH)">
+                                <group col="4">
+                                    <field name="dest_ip_address" string="Server IP" required="1"/>
+                                    <field name="dest_port_no" string="SSH Port Number" required="1"/>
+                                    <field name="dest_username" string="Server Login Username" required="1"/>
+                                    <field name="source_zip_path" string="Source Backup Zip File Path" required="1"/>
+                                    <field name="dest_zip_path" string="Destination Backup Zip File Path" required="1"/>
+                                    <field name="su_password" string="Server Superuser Password" password="True" required="1"/>
+                                    <field name="expire_days" string="Backup Expire Days" required="1"/>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action to open backup server configuration tree view -->
+        <record id="backup_config_act" model="ir.actions.act_window">
+            <field name="name">Backup Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">backup.server.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+<!--        &lt;!&ndash; Cron Job to Restore Database&ndash;&gt;-->
+<!--        <record id="auto_restore_database" model="ir.cron">-->
+<!--            <field name="name">Auto Restore Database on Remote Server</field>-->
+<!--            <field name="active" eval="True"/>-->
+<!--            <field name="user_id" ref="base.user_root"/>-->
+<!--            <field name="interval_number">1</field>-->
+<!--            <field name="interval_type">weeks</field>-->
+<!--            <field name="numbercall">-1</field>-->
+<!--            <field name="nextcall"-->
+<!--                   eval="(DateTime.now().replace(hour=0, minute = 0,second=0) + timedelta(days=1) - timedelta(hours=5)).strftime('%Y-%m-%d %H:%M:%S')"/>-->
+<!--            <field name="doall" eval="False"/>-->
+<!--            <field name="model" eval="'restoration.config'"/>-->
+<!--            <field name="function" eval="'auto_restore'"/>-->
+<!--            <field eval="'()'" name="args"/>-->
+<!--        </record>-->
+
+        <!-- Menuitems to show db_automated_backup -->
+        <menuitem id="menu_backup_config" action="backup_config_act" parent="pivotino_website.menu_action_pivotino_saas" groups="base.group_user"/>
+
+</odoo>

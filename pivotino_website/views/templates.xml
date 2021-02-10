@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- *** Primary Variables *** -->
+    <template id="_assets_primary_variables" inherit_id="web._assets_primary_variables" priority="15">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_website/static/src/scss/primary_variables.scss"/>
+        </xpath>
+    </template>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr=".">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_website/static/src/scss/pivotino_website.scss"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_website/static/src/scss/privacy.scss"/>
+            <!--            <script type="text/javascript"-->
+            <!--                    src="/pivotino_website/static/src/js/pivotino_website.js"/>-->
+            <script type="text/javascript"
+                    src="/pivotino_website/static/src/js/resend_email.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_website/static/src/js/floating_label_password.js"/>
+        </xpath>
+    </template>
+
+    <template id="pivotino_assets_website_form" inherit_id="intl_phone_field.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pivotino_website/static/src/js/s_website_form.js"/>
+        </xpath>
+    </template>
+
+    <template id="pivotino_website.assets_editor" inherit_id="website.assets_editor" name="Website Editor Assets (used in website editor)">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pivotino_website/static/src/js/user_management.js"/>
+        </xpath>
+    </template>
+
+</odoo>

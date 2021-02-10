@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="pivotino_positive_feedback_view_tree" model="ir.ui.view">
+            <field name="name">pivotino.positive.feedback.view.tree</field>
+            <field name="model">positive.general.feedback</field>
+            <field name="arch" type="xml">
+                <tree string="Positive General Feedback" create="false" delete="false" import="false">
+                    <field name="username"/>
+                    <field name="domain"/>
+                    <field name="email"/>
+                    <field name="feedback_value"/>
+                    <field name="feedback_code"/>
+                    <field name="selected_questions"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pivotino_negative_feedback_view_tree" model="ir.ui.view">
+            <field name="name">pivotino.negative.feedback.view.tree</field>
+            <field name="model">negative.general.feedback</field>
+            <field name="arch" type="xml">
+                <tree string="Negative General Feedback" create="false" delete="false" import="false">
+                    <field name="username"/>
+                    <field name="domain"/>
+                    <field name="email"/>
+                    <field name="feedback_value"/>
+                    <field name="feedback_code"/>
+                    <field name="selected_questions"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pivotino_additional_feedback_view_tree" model="ir.ui.view">
+            <field name="name">pivotino.additional.feedback.view.tree</field>
+            <field name="model">additional.general.feedback</field>
+            <field name="arch" type="xml">
+                <tree string="Additional General Feedback" create="false" delete="false" import="false">
+                    <field name="username"/>
+                    <field name="domain"/>
+                    <field name="email"/>
+                    <field name="additional_feedback"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--    Positive Feedback Action   -->
+        <record id="pivotino_positive_feedback_action" model="ir.actions.act_window">
+            <field name="name">Positive Feedback</field>
+            <field name="res_model">positive.general.feedback</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--    Negative Feedback Action   -->
+        <record id="pivotino_negative_feedback_action" model="ir.actions.act_window">
+            <field name="name">Negative Feedback</field>
+            <field name="res_model">negative.general.feedback</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--    Additional Feedback Action   -->
+        <record id="pivotino_additional_feedback_action" model="ir.actions.act_window">
+            <field name="name">Additional Feedback</field>
+            <field name="res_model">additional.general.feedback</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="feedback_positive_popup"
+                  name="Positive Feedback"
+                  action="pivotino_positive_feedback_action"
+                  parent="pivotino_feedback.menu_feedback_root"/>
+
+        <menuitem id="feedback_negative_popup"
+                  name="Negative Feedback"
+                  action="pivotino_negative_feedback_action"
+                  parent="pivotino_feedback.menu_feedback_root"/>
+
+        <menuitem id="feedback_additional_popup"
+                  name="Additional Feedback"
+                  action="pivotino_additional_feedback_action"
+                  parent="pivotino_feedback.menu_feedback_root"/>
+
+    </data>
+</odoo>

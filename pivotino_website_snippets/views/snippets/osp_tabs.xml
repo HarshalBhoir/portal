@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="osp_tabs" name="OSP Tabs">
+        <section class="osp_tabs pt48 pb48" data-vcss="001">
+            <div class="osp-tabs-container container">
+                <div class="col-12">
+                    <div class="connecting-line"/>
+                    <ul class="nav nav-tabs justify-content-center text-center" role="tablist">
+                        <li class="nav-item col-3 pt8 pb8 svg-icon-container">
+                            <a class="nav-link active"
+                                id="nav_tabs_link_1"
+                                data-toggle="tab"
+                                href="#nav_tabs_content_1"
+                                role="tab"
+                                aria-controls="nav_tabs_content_1"
+                                aria-selected="true">
+                                <img src="/osp_customization/static/src/img/discuss.svg" class="svg-icon svg-icon-normal"/>
+                                <img src="/osp_customization/static/src/img/discuss-active.svg" class="svg-icon svg-icon-highlight"/>
+                            </a>
+                        </li>
+                        <li class="nav-item col-3 pt8 pb8 svg-icon-container">
+                            <a class="nav-link"
+                                id="nav_tabs_link_2"
+                                data-toggle="tab"
+                                href="#nav_tabs_content_2"
+                                role="tab"
+                                aria-controls="nav_tabs_content_2"
+                                aria-selected="false">
+                                <img src="/osp_customization/static/src/img/process.svg" class="svg-icon svg-icon-normal"/>
+                                <img src="/osp_customization/static/src/img/process-active.svg" class="svg-icon svg-icon-highlight"/>
+                            </a>
+                        </li>
+                        <li class="nav-item col-3 pt8 pb8 svg-icon-container">
+                            <a class="nav-link"
+                                id="nav_tabs_link_3"
+                                data-toggle="tab"
+                                href="#nav_tabs_content_3"
+                                role="tab"
+                                aria-controls="nav_tabs_content_3"
+                                aria-selected="false">
+                                <img src="/osp_customization/static/src/img/code.svg" class="svg-icon svg-icon-normal"/>
+                                <img src="/osp_customization/static/src/img/code-active.svg" class="svg-icon svg-icon-highlight"/>
+                            </a>
+                        </li>
+                        <li class="nav-item col-3 pt8 pb8 svg-icon-container">
+                            <a class="nav-link"
+                                id="nav_tabs_link_4"
+                                data-toggle="tab"
+                                href="#nav_tabs_content_4"
+                                role="tab"
+                                aria-controls="nav_tabs_content_4"
+                                aria-selected="false">
+                                <img src="/osp_customization/static/src/img/support.svg" class="svg-icon svg-icon-normal"/>
+                                <img src="/osp_customization/static/src/img/support-active.svg" class="svg-icon svg-icon-highlight"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="s_tabs_content tab-content">
+                    <div class="tab-pane fade show active"
+                        id="nav_tabs_content_1"
+                        role="tabpanel"
+                        aria-labelledby="nav_tabs_link_1">
+                        <div class="oe_structure oe_empty"/>
+                    </div>
+                    <div class="tab-pane fade"
+                        id="nav_tabs_content_2"
+                        role="tabpanel"
+                        aria-labelledby="nav_tabs_link_2">
+                        <div class="oe_structure oe_empty"/>
+                    </div>
+                    <div class="tab-pane fade"
+                        id="nav_tabs_content_3"
+                        role="tabpanel"
+                        aria-labelledby="nav_tabs_link_3">
+                        <div class="oe_structure oe_empty"/>
+                    </div>
+                    <div class="tab-pane fade"
+                        id="nav_tabs_content_4"
+                        role="tabpanel"
+                        aria-labelledby="nav_tabs_link_4">
+                        <div class="oe_structure oe_empty"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="osp_tabs_flat" name="Tabs (Flat)">
+        <section class="osp_tabs_flat pt48 pb48" data-vcss="001">
+            <div class="container">
+                <div class="s_tabs_main">
+                    <div class="s_tabs_nav mb-3">
+                        <ul class="nav nav-pills justify-content-center" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active btn btn-lg flat"
+                                    id="nav_tabs_link_1"
+                                    data-toggle="tab"
+                                    href="#nav_tabs_content_1"
+                                    role="tab"
+                                    aria-controls="nav_tabs_content_1"
+                                    aria-selected="true">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-lg flat"
+                                    id="nav_tabs_link_2"
+                                    data-toggle="tab"
+                                    href="#nav_tabs_content_2"
+                                    role="tab"
+                                    aria-controls="nav_tabs_content_2"
+                                    aria-selected="false">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-lg flat"
+                                    id="nav_tabs_link_3"
+                                    data-toggle="tab"
+                                    href="#nav_tabs_content_3"
+                                    role="tab"
+                                    aria-controls="nav_tabs_content_3"
+                                    aria-selected="false">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="s_tabs_content tab-content">
+                        <div class="tab-pane fade show active"
+                            id="nav_tabs_content_1"
+                            role="tabpanel"
+                            aria-labelledby="nav_tabs_link_1">
+                            <div class="oe_structure oe_empty"/>
+                        </div>
+                        <div class="tab-pane fade"
+                            id="nav_tabs_content_2"
+                            role="tabpanel"
+                            aria-labelledby="nav_tabs_link_2">
+                            <div class="oe_structure oe_empty"/>
+                        </div>
+                        <div class="tab-pane fade"
+                            id="nav_tabs_content_3"
+                            role="tabpanel"
+                            aria-labelledby="nav_tabs_link_3">
+                            <div class="oe_structure oe_empty"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

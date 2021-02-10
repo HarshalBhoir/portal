@@ -1,0 +1,266 @@
+/* ---- Password Icon ----*/
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+}
+
+.reset-password {
+  text-align: right;
+  margin-top: -15px;
+}
+
+.button-send {
+  margin-top: 35px;
+}
+
+.toggle-password {
+  margin-right: 10px;
+}
+
+.back-login {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.message {
+  font-size: 13px;
+  text-align: left;
+  padding-left: 115px;
+  padding-right: 115px;
+}
+
+.send-message {
+  font-size: 13px;
+  text-align: left;
+  padding-left: 43px;
+  padding-right: 45px;
+}
+
+.resend-message {
+  font-size: 13px;
+  text-align: center;
+}
+
+.button-pivotino {
+  margin-top: 10px;
+}
+
+/* ---- Float Label in Input ----- */
+.float-container {
+//   border: solid 1px #ccc;
+//   padding: 0 8px;
+  position: relative;
+}
+.float-container input {
+  border: none;
+  font-size: 16px;
+  margin: 16px 0 10px;
+  outline: 0;
+}
+.floatingLabel {
+  font-weight: 400;
+  color: gray;
+  margin-left: 9px;
+  font-size: 13px;
+  position: absolute;
+  transform-origin: top left;
+  transform: translate(0, 16px) scale(1);
+  transition: all .1s ease-in-out;
+}
+.float-container.active .floatingLabel {
+  transform: translate(0, 4px) scale(.75);
+}
+
+.form-control {
+  height: 48px;
+  padding-left: 10px;
+  padding-top: 18px;
+}
+
+.new-form1 {
+  padding-right: 6px;
+  margin-bottom: -17px;
+}
+
+.new-form2 {
+  padding-left: 6px;
+  margin-bottom: -17px;
+}
+
+/* ----- Subscription SignUp ----- */
+.pivotino_subscription_form {
+    .input-subdomain-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .domain_instruction {
+        padding-left: 7px;
+        font-size: 16px;
+    }
+
+    .domain_text {
+        margin-top: 7px;
+        font-size: 12px;
+    }
+
+    .title_text {
+        margin-top: 7px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .info_text {
+        margin-top: 7px;
+        margin-bottom: -12px;
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .info_reset_text {
+        margin-top: 7px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .login_text {
+        margin-top: 7px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .reset_text {
+        margin-top: 7px;
+        font-size: 13px;
+        text-align: right;
+    }
+
+    .auto_suggest_loader {
+        position: relative;
+        top: 37px;
+        z-index: 99999;
+        right: 55px;
+    }
+}
+
+/* ----- Navbar ----- */
+
+header#top .navbar.navbar-light {
+    background-color: transparent !important;
+}
+
+/* ----- HomePage ----- */
+
+.pivotino-curve-1 {
+    position: absolute;
+    width: 65%;
+    top: 0;
+    height: 100%;
+    right: 0;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+    }
+}
+
+.s_fingertips {
+    position: relative;
+    z-index: 1;
+
+    .pivotino-curve-2 {
+        position: absolute;
+        top: -30%;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: auto;
+
+        img {
+            height: 100%;
+            width: auto;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.mobile_friendly {
+    position: relative;
+    z-index: 1;
+
+    .pivotino-curve-3 {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        z-index: -1;
+        height: auto;
+        width: auto;
+
+        img {
+            height: 100%;
+            width: auto;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.statistic_area {
+    position: relative;
+    z-index: 1;
+
+    .pivotino-curve-4 {
+        position: absolute;
+        left: 0;
+        top: 20%;
+        z-index: -1;
+        height: 100%;
+        width: auto;
+
+        @include media-breakpoint-down(sm) {
+            height: 45%;
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+/* ----- Footer ----- */
+
+.pivotino_footer {
+    background-color: $o-community-color-dark;
+
+    a {
+        text-decoration: none !important;
+    }
+
+    //.pivotino-app-section {
+    //    img {
+    //        height: 70px;
+    //    }
+    //}
+}
+
+.pivotino_footer_copyright {
+    background-color: $o-community-color-dark;
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .copyright-footer-separator {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}

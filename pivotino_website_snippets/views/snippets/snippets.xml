@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="osp_snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_header')]" position="before">
+            <div class="o_panel_header">Pivotino Snippets</div>
+            <div class="o_panel_body">
+<!--                <t t-snippet="pivotino_website_snippets.s_banner_video" t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg"/>-->
+<!--                <t t-snippet="pivotino_website_snippets.easy_pie_chart" t-thumbnail="/website/static/src/img/snippets_thumbs/s_features.svg"/>-->
+                <t t-snippet="pivotino_website_snippets.osp_banner" t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_carousel_top_space" t-thumbnail="/website/static/src/img/snippets_thumbs/s_carousel.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_carousel" t-thumbnail="/website/static/src/img/snippets_thumbs/s_carousel.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_carousel_bottom_space" t-thumbnail="/website/static/src/img/snippets_thumbs/s_carousel.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_tabs" t-thumbnail="/website/static/src/img/snippets_thumbs/s_tabs.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_tabs_flat" t-thumbnail="/website/static/src/img/snippets_thumbs/s_tabs.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_popup" t-thumbnail="/website/static/src/img/snippets_thumbs/s_popup.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_showcase_3_2" t-thumbnail="/website/static/src/img/snippets_thumbs/s_showcase.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_showcase_2_2" t-thumbnail="/website/static/src/img/snippets_thumbs/s_showcase.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_showcase_2_1" t-thumbnail="/website/static/src/img/snippets_thumbs/s_showcase.svg"/>
+                <t t-snippet="pivotino_website_snippets.osp_features_grid" t-thumbnail="/website/static/src/img/snippets_thumbs/s_features_grid.svg"/>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="osp_image_text_layout_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-option-name='vAlignment']" position="inside">
+            <we-button-group string="Layout">
+                <we-button title="Left"
+                           data-name="media_left_opt"
+                           data-select-class=""
+                           data-img="/website/static/src/img/snippets_options/image_left.svg"/>
+                <we-button title="Right"
+                           data-select-class="flex-row-reverse"
+                           data-img="/website/static/src/img/snippets_options/image_right.svg"/>
+            </we-button-group>
+        </xpath>
+    </template>
+
+</odoo>

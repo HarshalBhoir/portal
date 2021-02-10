@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pivotino_view_partner_form" model="ir.ui.view">
+        <field name="name">pivotino.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="inside">
+                <div name="options" groups="base.group_user">
+                    <div>
+                        <field name="subscription_company" readonly="True"/>
+                        <label for="subscription_company"/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Pivotino" attrs="{'invisible': [('subscription_company', '=', False)]}">
+                    <group name="pivo_info" string="Information">
+                        <group>
+                            <field name="welcome_sent_count"/>
+                        </group>
+                        <group>
+                            <field name="main_saas_user"/>
+                            <field name="ip_address"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                    <group name="pivo_rancher" string="Rancher Info">
+                        <group>
+                            <field name="instance_url"/>
+                            <field name="instance_id"/>
+                            <field name="database_id"/>
+                            <field name="is_staging" invisible="0"/>
+                        </group>
+                    </group>
+                    <group name="pivo_subscription" string="Subscription Info">
+                        <group>
+                            <field name="subscription_id"/>
+                            <field name="subscription_token"/>
+                            <field name="subscription_start_date"/>
+                            <field name="subscription_end_date"/>
+                        </group>
+                        <group>
+                            <field name="addon_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <group name="pivo_subscription_history" string="Subscription History">
+                        <field name="subscription_history_ids" widget="many2many" nolabel="1">
+                            <tree string="Subscription History" create="false" edit="false" delete="false"
+                                  default_order="create_date desc, id desc">
+                                <field name="subscription_date"/>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="type"/>
+                                <field name="duration"/>
+                                <field name="validity_date"/>
+                                <field name="price" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

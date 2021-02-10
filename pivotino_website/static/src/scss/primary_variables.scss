@@ -1,0 +1,51 @@
+// Colors
+//$o-community-color: #3ec1d5;
+//$o-enterprise-color: #3ec1d5;
+//$o-enterprise-primary-color: #5ce1e6;
+//
+//$o-brand-odoo: $o-enterprise-color;
+//$o-brand-primary: $o-enterprise-primary-color;
+
+$pivotino-theme-h1-font-size-multiplier: 3.5 !default;
+$pivotino-theme-h2-font-size-multiplier: 3 !default;
+$pivotino-theme-h3-font-size-multiplier: 2.75 !default;
+$pivotino-theme-h4-font-size-multiplier: 2.5 !default;
+$pivotino-theme-h5-font-size-multiplier: 2.25 !default;
+$pivotino-theme-h6-font-size-multiplier: 2 !default;
+
+
+$pivotino-h1-font-size: $o-font-size-base * $pivotino-theme-h1-font-size-multiplier !default;
+$pivotino-h2-font-size: $o-font-size-base * $pivotino-theme-h2-font-size-multiplier !default;
+$pivotino-h3-font-size: $o-font-size-base * $pivotino-theme-h3-font-size-multiplier !default;
+$pivotino-h4-font-size: $o-font-size-base * $pivotino-theme-h4-font-size-multiplier !default;
+$pivotino-h5-font-size: $o-font-size-base * $pivotino-theme-h5-font-size-multiplier !default;
+$pivotino-h6-font-size: $o-font-size-base * $pivotino-theme-h6-font-size-multiplier !default;
+
+.pivotino-h1 { @include font-size($pivotino-h1-font-size); }
+.pivotino-h2 { @include font-size($pivotino-h2-font-size); }
+.pivotino-h3 { @include font-size($pivotino-h3-font-size); }
+.pivotino-h4 { @include font-size($pivotino-h4-font-size); }
+.pivotino-h5 { @include font-size($pivotino-h5-font-size); }
+.pivotino-h6 { @include font-size($pivotino-h6-font-size); }
+
+// Colors
+$o-color-palettes: (
+    (
+        'o-color-1': #F6B116,
+        'o-color-2': #0574BB,
+        'o-color-3': #FFFFFF,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #01173D,
+    ),
+    (
+        'o-color-1': #F6B116,
+        'o-color-2': #0574BB,
+        'o-color-3': #FFFFFF,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #01173D,
+
+        'menu': 2,
+        'footer': 2,
+        'copyright': 5,
+    ),
+);

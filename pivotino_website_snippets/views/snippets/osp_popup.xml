@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="osp_popup" name="OSP Popup">
+        <div class="s_popup o_snippet_invisible" data-vcss="001">
+            <div class="modal fade s_popup_middle osp_popup_modal"
+                 style="background-color: var(--black-50) !important;"
+                 data-show-after="5000"
+                 data-display="afterDelay"
+                 data-consents-duration="7"
+                 data-focus="false"
+                 data-backdrop="false"
+                 tabindex="-1"
+                 role="dialog">
+                <div class="modal-dialog d-flex">
+                    <div class="modal-content oe_structure">
+                        <div class="s_popup_close js_close_popup o_we_no_overlay o_not_editable">&amp;times;</div>
+                        <section class="s_banner oe_img_bg pt48 pb48"
+                                 data-snippet="s_banner"
+                                 style="background-image: url('/web/image/website.s_popup_default_image');">
+                            <div class="container">
+                                <div class="row s_nb_column_fixed">
+                                    <div class="col-lg-10 offset-lg-1 text-center o_cc o_cc1 jumbotron pt32 pb32 s_website_form_osp_popup">
+                                        <h2><font style="font-size: 42px;">Get Your Free Demo Today!</font></h2>
+                                        <h4>We are ready to help.</h4>
+                                        <section class="s_website_form osp_popup_form" data-vcss="001">
+                                                <input type="hidden" class="form-control s_website_form_input osp_popup_medium" name="medium_ref" value="Lead Magnet"/>
+                                                <div class="form-group s_website_form_required col-12">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <input placeholder="Full name" type="text" class="form-control col-8 offset-2 osp_popup_name" name="name" required=""/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group s_website_form_required col-12">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <input placeholder="Company email" type="email" class="form-control col-8 offset-2 osp_popup_email" name="email_from" required=""/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group s_website_form_required col-12">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <input type="tel" class="form-control col-8 offset-2 intlTelInput osp_popup_phone" name="phone" required=""/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                                    <a href="#" role="button" id="s_website_form_send_osp_popup" class="btn btn-primary btn-lg btn-block flat s_website_form_send_osp_popup col-8 offset-2">Request A Demo</a>
+                                                    <br/>
+                                                    <span class="osp_popup_error text-danger"></span>
+                                                </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="o_hidden col-lg-10 offset-lg-1 text-center o_cc o_cc1 jumbotron pt32 pb32 s_website_form_osp_popup_thanks">
+                                        <span class="fa fa-5x fa-thumbs-up mx-auto rounded-circle bg-primary shadow text-100"/>
+                                        <br/>
+                                        <h2 class="text-center text-primary pt32 pb8"><font style="font-size: 42px; font-weight: 600">Thank You!</font></h2>
+                                        <hr style="border-top-width: 5px !important; border-top-color: #f6f6f6 !important;"/>
+                                        <h4><span class="fa fa-check-circle mr4"/>Your message has been sent <b>successfully</b></h4>
+                                        <h5>We will get back to you shortly.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+</odoo>

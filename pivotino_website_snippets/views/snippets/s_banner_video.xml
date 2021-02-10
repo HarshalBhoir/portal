@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="s_banner_video" name="Banner with Video">
+        <section class="s_banner pt64 pb64">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pt16 pb16">
+                        <h2>A Section Subtitle</h2>
+                        <p>Write one or two paragraphs describing your product or services. <br/>To be successful your content needs to be useful to your readers.</p>
+                        <p>Start with the customer – find out what they want and give it to them.</p>
+                        <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+                            <a href="#" class="btn btn-primary">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16">
+                        <img src="/web/image/website.s_text_image_default_image" class="img img-fluid mx-auto img-pivotino-embed-video" alt="Pivotino • Image &amp; URL"/>
+                        <button class="pivotino-banner-play-button btn btn-link" data-toggle="modal" data-target="#knowPivotino">
+                            <i class="fa fa-play-circle-o fa-7x"/>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="knowPivotino" tabindex="-1"
+                             role="dialog" aria-labelledby="knowPivotino"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <!--Content-->
+                                <div class="modal-content">
+                                    <!--Body-->
+                                    <div class="modal-body mb-0 p-0">
+                                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                            <iframe class="embed-responsive-item"
+                                                    src="https://www.youtube.com/embed/RB1uzFcJYjU?autoplay=1"
+                                                    allowfullscreen="true" frameborder="0"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="osp_carousel" name="OSP Carousel">
+        <section class="s_carousel_wrapper" data-vxml="001">
+            <div id="ospCarousel" class="s_carousel s_carousel_default carousel slide bg-200" data-interval="10000">
+                <div class="container">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators osp-carousel-indicators">
+                        <li data-target="#ospCarousel" data-slide-to="0" class="active"/>
+                        <li data-target="#ospCarousel" data-slide-to="1"/>
+                        <li data-target="#ospCarousel" data-slide-to="2"/>
+                    </ol>
+                    <!-- Content -->
+                    <div class="carousel-inner">
+                        <!-- #01 -->
+                        <div class="carousel-item active col-lg-12 s_media_list_item pt16 pb16" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #02 -->
+                        <div class="carousel-item col-lg-12 s_media_list_item pt16 pb16" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #03 -->
+                        <div class="carousel-item col-lg-12 s_media_list_item pt16 pb16" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="osp_carousel_top_space" name="OSP Carousel (Top Space)">
+        <section class="s_carousel_wrapper" data-vxml="001">
+            <div id="ospCarouselTopSpace" class="s_carousel s_carousel_default carousel slide bg-200" data-interval="10000">
+                <div class="container">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators osp-carousel-indicators">
+                        <li data-target="#ospCarouselTopSpace" data-slide-to="0" class="active"/>
+                        <li data-target="#ospCarouselTopSpace" data-slide-to="1"/>
+                        <li data-target="#ospCarouselTopSpace" data-slide-to="2"/>
+                    </ol>
+                    <!-- Content -->
+                    <div class="carousel-inner">
+                        <!-- #01 -->
+                        <div class="carousel-item active col-lg-12 s_media_list_item pt48 pb16" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #02 -->
+                        <div class="carousel-item col-lg-12 s_media_list_item pt48 pb16" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #03 -->
+                        <div class="carousel-item col-lg-12 s_media_list_item pt48 pb16" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="osp_carousel_bottom_space" name="OSP Carousel (Bottom Space)">
+        <section class="s_carousel_wrapper" data-vxml="001">
+            <div id="ospCarouselBottomSpace" class="s_carousel s_carousel_bottom s_carousel_default carousel slide bg-200" data-interval="10000">
+                <div class="container">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators osp-carousel-indicators">
+                        <li data-target="#ospCarouselBottomSpace" data-slide-to="0" class="active"/>
+                        <li data-target="#ospCarouselBottomSpace" data-slide-to="1"/>
+                        <li data-target="#ospCarouselBottomSpace" data-slide-to="2"/>
+                    </ol>
+                    <!-- Content -->
+                    <div class="carousel-inner">
+                        <!-- #01 -->
+                        <div class="carousel-item active col-lg-12 s_media_list_item pt16 pb48" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #02 -->
+                        <div class="carousel-item col-lg-12 s_media_list_item pt16 pb48" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #03 -->
+                        <div class="carousel-item col-lg-12 s_media_list_item pt16 pb48" data-name="Slide">
+                            <div class="row shadow bg-white">
+                                <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper pl-0 pr-0">
+                                    <img src="/web/image/website.s_media_list_default_image_2" class="s_media_list_img h-100 w-100" alt=""/>
+                                </div>
+                                <div class="col-lg-8 s_media_list_body pt16 pb16">
+                                    <h3>Event heading</h3>
+                                    <p>Speakers from all over the world will join our experts to give inspiring talks on various topics. Stay on top of the latest business management trends &amp; technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

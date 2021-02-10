@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Subscription List for Publish/Un-publish feature -->
+    <template id="subscription_list" name="Subscription List">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Subscriptions</t>
+            <div id="wrap">
+                <div class="oe_structure"/>
+                <section class="mb16 bg-white">
+                    <div class="container">
+                        <div class="text-center mt16 mb16">
+                            <h1>All Subscriptions</h1>
+                        </div>
+                        <hr/>
+                        <div class="text-center mt16 mb16">
+                            <t t-foreach="subscriptions" t-as="subscription">
+                                <h3 class="mt16 mb16">
+                                    <span t-esc="subscription.name"/> ( <span t-esc="subscription.code"/> )
+                                    <t t-call="website.publish_management">
+                                        <t t-set="object" t-value="subscription"/>
+                                        <t t-set="publish_edit" t-value="True"/>
+                                    </t>
+                                </h3>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- Subscription Add-ons List for Publish/Un-publish feature -->
+    <template id="subscription_addons_list" name="Subscription Add-ons List">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Add-ons</t>
+            <div id="wrap">
+                <div class="oe_structure"/>
+                <section class="mb16 bg-white">
+                    <div class="container">
+                        <div class="text-center mt16 mb16">
+                            <h1>All Add-ons</h1>
+                        </div>
+                        <hr/>
+                        <div class="text-center mt16 mb16">
+                            <t t-foreach="addons" t-as="addon">
+                                <h3 class="mt16 mb16">
+                                    <span t-esc="addon.name"/> ( <span t-esc="addon.code"/> )
+                                    <t t-call="website.publish_management">
+                                        <t t-set="object" t-value="addon"/>
+                                        <t t-set="publish_edit" t-value="True"/>
+                                    </t>
+                                </h3>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- Subscription in My Account -->
+    <template id="portal_my_home_pivotino_subscription"
+              name="Portal My Home : pivotino subscription entries"
+              inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Subscriptions</t>
+                <t t-set="url" t-value="'/my/subscriptions'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- My Subscription Breadcrumb in detail -->
+    <template id="portal_my_home_menu_subscriptions"
+              name="Portal layout : subscriptions menu entries"
+              inherit_id="portal.portal_breadcrumbs" priority="20">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'pivo_subscription'" class="breadcrumb-item active">
+                <t t-esc="breadcrumb_name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- My Subscription in detail -->
+    <template id="portal_my_subscriptions" name="My Subscriptions">
+        <t t-call="portal.portal_layout">
+            <h2 class="mt32 mb16 text-alpha">Active Subscription</h2>
+            <t t-if="not subscription">
+                <p>There are currently no active subscription for your account.</p>
+            </t>
+            <t t-if="subscription" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Subscription</th>
+                        <th>Duration (in days)</th>
+                        <th class="text-right">Valid From</th>
+                        <th class="text-right">Valid Until</th>
+                        <th class="text-center"/>
+                    </tr>
+                </thead>
+                <tr>
+                    <td><t t-esc="subscription.name"/></td>
+                    <td><t t-esc="subscription.duration"/></td>
+                    <td class="text-right">
+                        <span t-esc="start_date"/>
+                    </td>
+                    <td class="text-right">
+                        <span t-esc="end_date"/>
+                    </td>
+                    <td class="text-center">
+                        <a t-att-href="instance_url" class="btn btn-primary" title="Access Application" target="_blank">
+                            <i class="fa fa-sign-in" aria-label="Sign In" role="img" title="Access Application"/>
+                        </a>
+                    </td>
+                </tr>
+            </t>
+            <hr class="mt32 mb32"/>
+            <h2 class="text-alpha mb16">Subscription History</h2>
+            <t t-if="not subscription_history_ids">
+                <p>There are currently no subscription history for your account.</p>
+            </t>
+            <t t-if="subscription_history_ids" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Subscription</th>
+                        <th>Code</th>
+                        <th>Type</th>
+                        <th>Duration (in days)</th>
+                        <th class="text-right">Valid From</th>
+                        <th class="text-right">Valid Until</th>
+                        <th class="text-right">Price</th>
+                    </tr>
+                </thead>
+                <t t-foreach="subscription_history_ids" t-as="subscription">
+                    <tr>
+                        <td><t t-esc="subscription.name"/></td>
+                        <td><t t-esc="subscription.code"/></td>
+                        <td><t t-esc="subscription.type"/></td>
+                        <td><t t-esc="subscription.duration"/></td>
+                        <td class="text-right">
+                            <span t-field="subscription.subscription_date"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="subscription.validity_date"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="subscription.price"/>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

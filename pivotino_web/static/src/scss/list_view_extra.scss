@@ -1,0 +1,7 @@
+.o_list_view {
+    .o_list_table .o_data_row.o_selected_row > .o_data_cell.o_required_modifier:not(.o_readonly_modifier):not(.o_invisible_modifier) {
+        .o_input {
+            border-bottom: 2px solid $o-community-color;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.o_required_modifier {
+    &.o_input, .o_input {
+        background-color: #fff !important;
+        border-bottom: 2px solid $o-community-color;
+    }
+}
+
+.o_field_widget {
+    // Many2one
+    &.o_field_many2one .o_external_button {
+        color: $o-community-primary-color;
+    }
+}

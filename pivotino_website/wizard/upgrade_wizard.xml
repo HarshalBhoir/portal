@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="upgrade_wizard_view" model="ir.ui.view">
+        <field name="name">upgrade.wizard.view</field>
+        <field name="model">upgrade.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Upgrade Instance">
+                <group>
+                    <p>
+                        Enter version to upgrade to:
+                    </p>
+                    <field name="version" required="1"/>
+                    <field name="user_ids" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="upgrade_instance" string="Upgrade" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="upgrade_wizard_action" model="ir.actions.act_window">
+        <field name="name">Upgrade Instance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">upgrade.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pivotino_website.upgrade_wizard_view"/>
+        <field name="target">new</field>
+    </record>
+
+<!--    <act_window name="Upgrade Instance"-->
+<!--                res_model="upgrade.wizard"-->
+<!--                src_model="res.users"-->
+<!--                view_mode="form"-->
+<!--                multi="True"-->
+<!--                target="new"-->
+<!--                id="upgrade_instance_menu"/>-->
+
+    <act_window id="upgrade_instance_menu"
+                name="Upgrade Instance"
+                binding_model="res.users"
+                res_model="upgrade.wizard"
+                view_mode="form"
+                target="new"/>
+
+</odoo>

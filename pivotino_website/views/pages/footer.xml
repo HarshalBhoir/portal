@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="pivotino_footer_custom" inherit_id="website.footer_custom">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo pivotino_footer" t-ignore="true" t-if="not no_footer">
+                <section class="s_text_block pt16 pb8">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 pt64">
+                                <h4 class="text-100"><strong>Pivotino</strong></h4>
+                                <ul class="list-unstyled">
+                                    <li><a class="text-400" href="/">Home</a></li>
+                                    <li><a class="text-400" href="/">Simplicity</a></li>
+                                    <li><a class="text-400" href="/">Mobility</a></li>
+                                    <li><a class="text-400" href="/">Business Owners</a></li>
+                                    <li><a class="text-400" href="/">Salesperson</a></li>
+                                </ul>
+                                <p>
+                                    <a t-if="website.social_facebook" t-att-href="website.social_facebook"
+                                       class="btn btn-sm btn-link text-facebook mr4">
+                                        <i class="fa fa-2x fa-facebook-f"/>
+                                    </a>
+                                    <a t-if="website.social_twitter" t-att-href="website.social_twitter"
+                                       class="btn btn-sm btn-link text-twitter mr4">
+                                        <i class="fa fa-2x fa-twitter"/>
+                                    </a>
+                                    <a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+                                       class="btn btn-sm btn-link text-linkedin mr4">
+                                        <i class="fa fa-2x fa-linkedin"/>
+                                    </a>
+                                    <a t-if="website.social_youtube" t-att-href="website.social_youtube"
+                                       class="btn btn-sm btn-link text-youtube mr4">
+                                        <i class="fa fa-2x fa-youtube-play"/>
+                                    </a>
+                                    <a t-if="website.social_github" t-att-href="website.social_github"
+                                       class="btn btn-sm btn-link text-300 mr4">
+                                        <i class="fa fa-2x fa-github"/>
+                                    </a>
+                                    <a t-if="website.social_instagram" t-att-href="website.social_instagram"
+                                       class="btn btn-sm btn-link text-instagram mr4">
+                                        <i class="fa fa-2x fa-instagram"/>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-lg-4 pt64" id="connect">
+                                <h4 class="text-100"><strong>About us</strong></h4>
+                                <ul class="list-unstyled">
+                                    <li><a class="text-400" href="/contactus">Our Story</a></li>
+                                    <li><a class="text-400" href="/contactus">Our Team</a></li>
+                                    <li><a class="text-400" href="/contactus">Contact us</a></li>
+                                </ul>
+                                <h4 class="text-100 pt8"><strong>Subscription</strong></h4>
+                                <ul class="list-unstyled">
+                                    <li><a class="text-400" href="/contactus">Pricing</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 pt64 pivotino-app-section">
+                                <h4 class="text-100"><strong>Download Pivotino App</strong></h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a target="_blank" href="/contactus">
+                                            <img class="img img-fluid pt4 pb4" src="/pivotino_website/static/src/img/app_store.png"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="/contactus">
+                                            <img class="img img-fluid pt4 pb4" src="/pivotino_website/static/src/img/play_store.png"/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="pivotino_footer_copyright_custom" inherit_id="website.layout" name="Footer Copyright">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="o_footer_copyright pivotino_footer_copyright">
+                <div class="container py-3">
+                    <div class="row">
+                        <div class="col-sm text-center text-sm-left text-muted pt4 pb4">
+                            <t t-call="web.debug_icon"/>
+                            <span class="text-200">Copyright &amp;copy;</span> <span class="text-200" itemprop="name"><strong>2021 Onnet Consulting</strong></span>
+                        </div>
+                        <div class="col-sm text-center text-sm-right text-muted pt4 pb4">
+                            <a class="text-200" href="/privacy">Privacy Policy</a>
+                            <span class="text-500 copyright-footer-separator"> | </span>
+                            <a class="text-200" href="/">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

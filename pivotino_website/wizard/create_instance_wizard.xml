@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="create_instance_wizard_view" model="ir.ui.view">
+        <field name="name">create.instance.wizard.view</field>
+        <field name="model">create.instance.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Instance">
+                <group>
+                    <p>
+                        Enter required info to create template/free instance:
+                    </p>
+                    <field name="version" required="1"/>
+                    <field name="instance_name" required="1"/>
+                    <field name="instance_type" required="1"/>
+                </group>
+                <footer>
+                    <button name="create_instance" string="Create" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="create_instance_wizard_action" model="ir.actions.act_window">
+        <field name="name">Create Instance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">create.instance.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pivotino_website.create_instance_wizard_view"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View: SaaS Subscription -->
+    <record id="view_pivotino_saas_subscription_tree" model="ir.ui.view">
+        <field name="name">saas.subscription.tree</field>
+        <field name="model">saas.subscription</field>
+        <field name="arch" type="xml">
+            <tree string="SaaS Subscription">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View: SaaS Subscription -->
+    <record id="view_pivotino_saas_subscription_form" model="ir.ui.view">
+        <field name="name">saas.subscription.form</field>
+        <field name="model">saas.subscription</field>
+        <field name="arch" type="xml">
+            <form string="SaaS Subscription">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <field name="is_published" widget="website_redirect_button"/>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" class="oe_inline"/></h1>
+                    </div>
+                    <label for="code" string="Code" class="oe_edit_only"/>
+                    <h2>
+                        <field name="code" class="oe_inline"/>
+                    </h2>
+                    <group>
+                        <field name="active" invisible="1"/>
+                        <field name="type"/>
+                        <field name="duration"/>
+                        <field name="price" attrs="{'invisible': [('type', '=', 'trial')],
+                        'required': [('type', '!=', 'trial')]}"/>
+                    </group>
+                    <notebook>
+                        <page name="users" string="Users">
+<!--                            <field name="partner_ids">-->
+<!--                                <tree create="false" edit="false" delete="false" string="Users">-->
+<!--                                    <field name="name"/>-->
+<!--                                    <field name="login"/>-->
+<!--                                    <field name="company"/>-->
+<!--                                    <field name="domain"/>-->
+<!--                                    <field name="instance_url"/>-->
+<!--                                    <field name="subscription_token" invisible="1"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View: SaaS Subscription -->
+    <record id="view_pivotino_saas_subscription_search" model="ir.ui.view">
+        <field name="name">saas.subscription.search</field>
+        <field name="model">saas.subscription</field>
+        <field name="arch" type="xml">
+            <search string="Search Subscription">
+                <field string="Name" name="name"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter string="Published" name="is_published" domain="[('is_published', '=', True)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action: SaaS Subscription -->
+    <record id="action_pivotino_saas_subscription" model="ir.actions.act_window">
+        <field name="name">SaaS Subscription</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">saas.subscription</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Tree View: SaaS Subscription -->
+    <record id="view_pivotino_saas_subscription_addons_tree" model="ir.ui.view">
+        <field name="name">saas.subscription.addons.tree</field>
+        <field name="model">saas.subscription.addons</field>
+        <field name="arch" type="xml">
+            <tree string="SaaS Subscriptions">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View: SaaS Subscription Add-ons -->
+    <record id="view_pivotino_saas_subscription_addons_form" model="ir.ui.view">
+        <field name="name">saas.subscription.addons.form</field>
+        <field name="model">saas.subscription.addons</field>
+        <field name="arch" type="xml">
+            <form string="SaaS Subscription Add-ons">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <field name="is_published" widget="website_redirect_button"/>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" class="oe_inline"/></h1>
+                    </div>
+                    <label for="code" string="Code" class="oe_edit_only"/>
+                    <h2>
+                        <field name="code" class="oe_inline"/>
+                    </h2>
+                    <group>
+                        <field name="active" invisible="1"/>
+                        <field name="type"/>
+                        <field name="price" attrs="{'invisible': [('type', '!=', 'extension')],
+                        'required': [('type', '!=', 'extension')]}"/>
+                        <field name="duration" attrs="{'invisible': [('type', '!=', 'promotion')],
+                        'required': [('type', '!=', 'promotion')]}"/>
+                    </group>
+                    <notebook>
+                        <page name="users" string="Users">
+<!--                            <field name="user_ids">-->
+<!--                                <tree create="false" edit="false" delete="false" string="Users">-->
+<!--                                    <field name="name"/>-->
+<!--                                    <field name="login"/>-->
+<!--                                    <field name="company"/>-->
+<!--                                    <field name="domain"/>-->
+<!--                                    <field name="instance_url"/>-->
+<!--                                    <field name="subscription_token" invisible="1"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View: SaaS Subscription Add-ons -->
+    <record id="view_pivotino_saas_subscription_addons_search" model="ir.ui.view">
+        <field name="name">saas.subscription.addons.search</field>
+        <field name="model">saas.subscription.addons</field>
+        <field name="arch" type="xml">
+            <search string="Search Subscription Add-ons">
+                <field string="Name" name="name"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter string="Published" name="is_published" domain="[('is_published', '=', True)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action: SaaS Subscription Add-ons -->
+    <record id="action_pivotino_saas_subscription_addons" model="ir.actions.act_window">
+        <field name="name">SaaS Subscription Add-ons</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">saas.subscription.addons</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Menu: Pivotino -->
+    <menuitem id="menu_action_pivotino_saas"
+              name="Pivotino"
+              parent="base.menu_administration"/>
+
+    <!-- Menu: SaaS Subscription -->
+    <menuitem action="action_pivotino_saas_subscription"
+              id="menu_action_pivotino_saas_subscription"
+              parent="pivotino_website.menu_action_pivotino_saas"/>
+
+    <!-- Menu: SaaS Subscription Add-ons -->
+    <menuitem action="action_pivotino_saas_subscription_addons"
+              id="menu_action_pivotino_saas_subscription_addons"
+              parent="pivotino_website.menu_action_pivotino_saas"/>
+
+</odoo>

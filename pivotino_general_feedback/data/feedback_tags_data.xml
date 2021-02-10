@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--        Positive Tags-->
+        <record id="positive_tag1" model="general.feedback.tags">
+            <field name="value">Easy and Quick Steps</field>
+            <field name="type">positive</field>
+            <field name="assigned">True</field>
+            <field name="code">001</field>
+        </record>
+        <record id="positive_tag2" model="general.feedback.tags">
+            <field name="value">Helpful Dashboard Analysis</field>
+            <field name="type">positive</field>
+            <field name="assigned">True</field>
+            <field name="code">002</field>
+        </record>
+        <record id="positive_tag3" model="general.feedback.tags">
+            <field name="value">User Friendly Navigations</field>
+            <field name="type">positive</field>
+            <field name="assigned">True</field>
+            <field name="code">003</field>
+        </record>
+        <record id="positive_tag4" model="general.feedback.tags">
+            <field name="value">Useful</field>
+            <field name="type">positive</field>
+            <field name="assigned">True</field>
+            <field name="code">004</field>
+        </record>
+        <record id="positive_tag5" model="general.feedback.tags">
+            <field name="value">Boosted my Sales</field>
+            <field name="type">positive</field>
+            <field name="assigned">True</field>
+            <field name="code">005</field>
+        </record>
+        <record id="positive_tag6" model="general.feedback.tags">
+            <field name="value">Easy to Understand</field>
+            <field name="type">positive</field>
+            <field name="assigned">True</field>
+            <field name="code">006</field>
+        </record>
+
+        <!--        Negative Tags-->
+        <record id="negative_tag1" model="general.feedback.tags">
+            <field name="value">Bad</field>
+            <field name="type">negative</field>
+            <field name="assigned">True</field>
+            <field name="code">007</field>
+        </record>
+        <record id="negative_tag2" model="general.feedback.tags">
+            <field name="value">Hard</field>
+            <field name="type">negative</field>
+            <field name="assigned">True</field>
+            <field name="code">008</field>
+        </record>
+        <record id="negative_tag3" model="general.feedback.tags">
+            <field name="value">Complex</field>
+            <field name="type">negative</field>
+            <field name="assigned">True</field>
+            <field name="code">009</field>
+        </record>
+        <record id="negative_tag4" model="general.feedback.tags">
+            <field name="value">Complicated</field>
+            <field name="type">negative</field>
+            <field name="assigned">True</field>
+            <field name="code">010</field>
+        </record>
+        <record id="negative_tag5" model="general.feedback.tags">
+            <field name="value">Confusing</field>
+            <field name="type">negative</field>
+            <field name="assigned">True</field>
+            <field name="code">011</field>
+        </record>
+        <record id="negative_tag6" model="general.feedback.tags">
+            <field name="value">Useless</field>
+            <field name="type">negative</field>
+            <field name="assigned">True</field>
+            <field name="code">012</field>
+        </record>
+
+    </data>
+</odoo>

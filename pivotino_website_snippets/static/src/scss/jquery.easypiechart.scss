@@ -1,0 +1,32 @@
+.chart_skill {
+  text-align: center;
+
+  .chart {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    .percent {
+      display: inline-block;
+      line-height: 180px;
+      z-index: 2;
+      font-size: 50px;
+      font-weight: 600;
+
+      &:after {
+        content: '%';
+        margin-left: 0.1em;
+        font-size: .8em;
+      }
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
